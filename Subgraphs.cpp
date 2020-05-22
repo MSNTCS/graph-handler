@@ -225,5 +225,13 @@ bool Subgraphs::BFS_for_landmarks(int src, int target) {
     return false;
 }
 
+bitset<5000> Subgraphs::get_bitvector() {
+    return this->bitvector;
+}
+void Subgraphs::set_shared_vertex(int labelset, int id) {
+    Subgraphvertrx s = {id, false};
+    shared.at(labelset).push_back(s);
+}
+
 
 

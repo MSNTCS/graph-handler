@@ -91,7 +91,7 @@
 		<Unit filename="/Users/mohammadsadeghnajafi/CLionProjects/ALC/graph_maintenance/Graph.h">
 			<Option target="ALC_"/>
 		</Unit>
-		<Unit filename="/Users/mohammadsadeghnajafi/CLionProjects/ALC/main.cc">
+		<Unit filename="/Users/mohammadsadeghnajafi/CLionProjects/ALC/graph_maintenance/main.cc">
 			<Option target="ALC_"/>
 		</Unit>
 		<Unit filename="/Users/mohammadsadeghnajafi/CLionProjects/ALC/CMakeLists.txt">

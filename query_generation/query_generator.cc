@@ -75,7 +75,7 @@ LabelSet generateLabelSet(LabelSet& ls, int nK, int L, std::uniform_int_distribu
         nL = getNumberOfLabelsInLabelSet(ls);
         //cout << "nL1 > nK j=" << j << ",nL1=" << nL1 << ",ls2=" << labelSetToString(ls2) << endl;
     }
-
+    cout<< ls << endl;
     return ls;
 }
 
@@ -171,7 +171,7 @@ void generateAllQueriesC(int nqs, int nq, QuerySets& qss, BFSIndex* ind, Graph* 
         MAX_DIFFICULTY = MIN_DIFFICULTY + 2;
     }
 
-    cout << "MAX_DIFFICULTY=" << MAX_DIFFICULTY << ",MIN_DIFFICULTY=" << MIN_DIFFICULTY << endl;
+    //cout << "MAX_DIFFICULTY=" << MAX_DIFFICULTY << ",MIN_DIFFICULTY=" << MIN_DIFFICULTY << endl;
 
     // two random distributions: one for picking a vertex, the second for
     // picking a difficulty
@@ -191,8 +191,8 @@ void generateAllQueriesC(int nqs, int nq, QuerySets& qss, BFSIndex* ind, Graph* 
     {
         int nK = noOfLabels[i / 2];
 
-        cout << "genQuery: creating querysets " << i << " (true) and " << (i+1) << " (false) with nK=" << nK << endl;
-        cout << "genQuery: ---" << endl;
+       // cout << "genQuery: creating querysets " << i << " (true) and " << (i+1) << " (false) with nK=" << nK << endl;
+        //cout << "genQuery: ---" << endl;
         int roundNo = 1;
         while( qss[i].size() < nq || qss[i+1].size() < nq )
         {
@@ -204,7 +204,7 @@ void generateAllQueriesC(int nqs, int nq, QuerySets& qss, BFSIndex* ind, Graph* 
             minDiff = max(1, minDiff - (roundNo/100) ); // minDiff can scale down
             // if no queries are generated
 
-            cout << "genQuery with minDiff=" << minDiff << ",s=" << s << ",quotum=" << quotum << endl;
+            //cout << "genQuery with minDiff=" << minDiff << ",s=" << s << ",quotum=" << quotum << endl;
             vector< int > distances;
 
             // loop over all nodes that have minimal difficulty
@@ -233,7 +233,7 @@ void generateAllQueriesC(int nqs, int nq, QuerySets& qss, BFSIndex* ind, Graph* 
 
                     LabelSet ls = 0;
                     ls = generateLabelSet(ls, nK, L, labelDistribution, generator3);
-
+                    cout << "LTS " << ls << " #" << labelSetToString(ls)<< endl;
                     bool b = ind->query(s,t,ls);
                     int actualDist = max(ind->getVisitedSetSize(), 0);
                     Query q = make_pair( make_pair(s,t), ls);

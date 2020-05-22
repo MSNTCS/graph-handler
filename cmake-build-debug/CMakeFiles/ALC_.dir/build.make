@@ -57,18 +57,18 @@ include CMakeFiles/ALC_.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ALC_.dir/flags.make
 
-CMakeFiles/ALC_.dir/main.cc.o: CMakeFiles/ALC_.dir/flags.make
-CMakeFiles/ALC_.dir/main.cc.o: ../main.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mohammadsadeghnajafi/CLionProjects/ALC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ALC_.dir/main.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ALC_.dir/main.cc.o -c /Users/mohammadsadeghnajafi/CLionProjects/ALC/main.cc
+CMakeFiles/ALC_.dir/graph_maintenance/main.cc.o: CMakeFiles/ALC_.dir/flags.make
+CMakeFiles/ALC_.dir/graph_maintenance/main.cc.o: ../graph_maintenance/main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mohammadsadeghnajafi/CLionProjects/ALC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ALC_.dir/graph_maintenance/main.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ALC_.dir/graph_maintenance/main.cc.o -c /Users/mohammadsadeghnajafi/CLionProjects/ALC/graph_maintenance/main.cc
 
-CMakeFiles/ALC_.dir/main.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ALC_.dir/main.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mohammadsadeghnajafi/CLionProjects/ALC/main.cc > CMakeFiles/ALC_.dir/main.cc.i
+CMakeFiles/ALC_.dir/graph_maintenance/main.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ALC_.dir/graph_maintenance/main.cc.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mohammadsadeghnajafi/CLionProjects/ALC/graph_maintenance/main.cc > CMakeFiles/ALC_.dir/graph_maintenance/main.cc.i
 
-CMakeFiles/ALC_.dir/main.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ALC_.dir/main.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mohammadsadeghnajafi/CLionProjects/ALC/main.cc -o CMakeFiles/ALC_.dir/main.cc.s
+CMakeFiles/ALC_.dir/graph_maintenance/main.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ALC_.dir/graph_maintenance/main.cc.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mohammadsadeghnajafi/CLionProjects/ALC/graph_maintenance/main.cc -o CMakeFiles/ALC_.dir/graph_maintenance/main.cc.s
 
 CMakeFiles/ALC_.dir/graph_maintenance/DGraph.cc.o: CMakeFiles/ALC_.dir/flags.make
 CMakeFiles/ALC_.dir/graph_maintenance/DGraph.cc.o: ../graph_maintenance/DGraph.cc
@@ -85,13 +85,13 @@ CMakeFiles/ALC_.dir/graph_maintenance/DGraph.cc.s: cmake_force
 
 # Object files for target ALC_
 ALC__OBJECTS = \
-"CMakeFiles/ALC_.dir/main.cc.o" \
+"CMakeFiles/ALC_.dir/graph_maintenance/main.cc.o" \
 "CMakeFiles/ALC_.dir/graph_maintenance/DGraph.cc.o"
 
 # External object files for target ALC_
 ALC__EXTERNAL_OBJECTS =
 
-ALC_: CMakeFiles/ALC_.dir/main.cc.o
+ALC_: CMakeFiles/ALC_.dir/graph_maintenance/main.cc.o
 ALC_: CMakeFiles/ALC_.dir/graph_maintenance/DGraph.cc.o
 ALC_: CMakeFiles/ALC_.dir/build.make
 ALC_: CMakeFiles/ALC_.dir/link.txt

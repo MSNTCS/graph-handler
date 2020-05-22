@@ -27,6 +27,5 @@ int main(int argc, char *argv[])
         cout << "L or N too small" << endl;
         return 1;
     }
-
     return 0;
 }

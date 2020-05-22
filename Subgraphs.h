@@ -28,6 +28,7 @@ private:
     vector<SubgraphEdge> subedges;
     int size;
     bitset<5000> bitvector;
+    vector<vector<Subgraphvertrx>> shared;
 public:
     vector<vector<int>> adjlist;
     vector<Subgraphvertrx> vertices;
@@ -48,6 +49,8 @@ public:
     void DFSUtil(int s, int v);
     void transitive_closure(int);
     bool BFS_for_landmarks(int src, int target);
+    bitset<5000> get_bitvector();
+    void set_shared_vertex(int labelset, int id);
 };
 
 

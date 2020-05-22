@@ -150,32 +150,32 @@ graph_maintenance/DGraph.cc.s:
 	$(MAKE) -f CMakeFiles/ALC_.dir/build.make CMakeFiles/ALC_.dir/graph_maintenance/DGraph.cc.s
 .PHONY : graph_maintenance/DGraph.cc.s
 
-main.o: main.cc.o
+graph_maintenance/main.o: graph_maintenance/main.cc.o
 
-.PHONY : main.o
+.PHONY : graph_maintenance/main.o
 
 # target to build an object file
-main.cc.o:
-	$(MAKE) -f CMakeFiles/ALC_.dir/build.make CMakeFiles/ALC_.dir/main.cc.o
-.PHONY : main.cc.o
+graph_maintenance/main.cc.o:
+	$(MAKE) -f CMakeFiles/ALC_.dir/build.make CMakeFiles/ALC_.dir/graph_maintenance/main.cc.o
+.PHONY : graph_maintenance/main.cc.o
 
-main.i: main.cc.i
+graph_maintenance/main.i: graph_maintenance/main.cc.i
 
-.PHONY : main.i
+.PHONY : graph_maintenance/main.i
 
 # target to preprocess a source file
-main.cc.i:
-	$(MAKE) -f CMakeFiles/ALC_.dir/build.make CMakeFiles/ALC_.dir/main.cc.i
-.PHONY : main.cc.i
+graph_maintenance/main.cc.i:
+	$(MAKE) -f CMakeFiles/ALC_.dir/build.make CMakeFiles/ALC_.dir/graph_maintenance/main.cc.i
+.PHONY : graph_maintenance/main.cc.i
 
-main.s: main.cc.s
+graph_maintenance/main.s: graph_maintenance/main.cc.s
 
-.PHONY : main.s
+.PHONY : graph_maintenance/main.s
 
 # target to generate assembly for a file
-main.cc.s:
-	$(MAKE) -f CMakeFiles/ALC_.dir/build.make CMakeFiles/ALC_.dir/main.cc.s
-.PHONY : main.cc.s
+graph_maintenance/main.cc.s:
+	$(MAKE) -f CMakeFiles/ALC_.dir/build.make CMakeFiles/ALC_.dir/graph_maintenance/main.cc.s
+.PHONY : graph_maintenance/main.cc.s
 
 # Help Target
 help:
@@ -189,9 +189,9 @@ help:
 	@echo "... graph_maintenance/DGraph.o"
 	@echo "... graph_maintenance/DGraph.i"
 	@echo "... graph_maintenance/DGraph.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... graph_maintenance/main.o"
+	@echo "... graph_maintenance/main.i"
+	@echo "... graph_maintenance/main.s"
 .PHONY : help
 
 

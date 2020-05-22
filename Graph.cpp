@@ -568,4 +568,39 @@ int Graph::get_n() {
     return this->N;
 }
 
+int Graph::number_of_shared_vertices() {
+    unordered_map<string, Vertex*>::iterator itr1;
+    cout << " I am here" << endl ;
+    int shared_vertices = 0;
+        for (itr1 = ver_map.begin(); itr1 != ver_map.end(); itr1++) {
+                list<Edge*> edges = itr1->second->getedge();
+            for (int j = 0; j < edges.size() ; ++j) {
+                Edge* e = edges.front();
+                Edge* e2 = edges.back();
+                if(e->getlabel() != e2->getlabel()){
+                    shared_vertices += 1;
+                }
+                break;
+            }
+        }
+    return shared_vertices;
+}
+
+void Graph::compute_shared_vertices() {
+    for (int i = 0; i < 8; ++i) {
+        Subgraphs* sub1 = subgraphs.at(i);
+        bitset <5000> vertices_1 (sub1->get_bitvector());
+        for (int j = 0; j < 8; ++j) {
+            if(i!=j){
+                Subgraphs* sub2 = subgraphs.at(j);
+                bitset <5000> vertices_2 (sub2->get_bitvector());
+                for (int k = 0; k < vertices_2.size() ; ++k) {
+                    if(vertices_1[k] == vertices_2[k] && vertices_1[k] == 1){
+                        sub1->set_shared_vertex(j, k);
+                    }
+                }
+            }
+        }
+    }
+}
 

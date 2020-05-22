@@ -46,6 +46,7 @@ private:
 
 public:
     vector<Subgraphs*> subgraphs;
+    std::vector<std::bitset<5000>> shared_vertices;
 
     Graph();
     int vertex_size();
@@ -81,6 +82,8 @@ public:
     int get_labels_edge_size(string label);
     void set_n();
     int get_n();
+    int number_of_shared_vertices();
+    void compute_shared_vertices();
 };
 
 

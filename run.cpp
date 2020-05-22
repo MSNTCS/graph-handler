@@ -65,22 +65,24 @@ int main(int argc, char *argv[])
 {
      Graph* graph = new Graph();
      string file = argv[1];
-     int number_of_query_sets = atoi(argv[2]);
+     //int number_of_query_sets = atoi(argv[2]);
      graph->loadedgefile(file);
-     graph->generate_subgraphs(0);
-    for (int k = 0; k < number_of_query_sets; ++k) {
-        string trueFileName = argv[3];
-        //string falseFileName = "../Samples/" + file + to_string(k) + ".false";
-        vector<query> q_true = load_query(trueFileName);
-        //vector<query> q_false = load_query(falseFileName);
-        for (int i = 0; i < q_true.size() ; ++i) {
-            query q = q_true.at(i);
-            cout << q.src << q.target << endl;
-            unordered_set<string> labels;
-            for (int j = 0; j < q.labels.size() ; ++j) {
-                labels.insert(to_string(q.labels.at(i)));
-            }
-           graph->BFS_for_subgraphs(to_string(q.src), to_string(q.target), labels );
-        }
-    }
+    int s =  graph->number_of_shared_vertices();
+    cout << s << endl;
+ //    graph->generate_subgraphs(0);
+//    for (int k = 0; k < number_of_query_sets; ++k) {
+//        string trueFileName = argv[3];
+//        //string falseFileName = "../Samples/" + file + to_string(k) + ".false";
+//        vector<query> q_true = load_query(trueFileName);
+//        //vector<query> q_false = load_query(falseFileName);
+//        for (int i = 0; i < q_true.size() ; ++i) {
+//            query q = q_true.at(i);
+//            cout << q.src << q.target << endl;
+//            unordered_set<string> labels;
+//            for (int j = 0; j < q.labels.size() ; ++j) {
+//                labels.insert(to_string(q.labels.at(i)));
+//            }
+//           graph->BFS_for_subgraphs(to_string(q.src), to_string(q.target), labels );
+//        }
+//    }
 }
